@@ -1,0 +1,1 @@
+alert("Hello, this is a demo of a JavaScript Alert Box!")
