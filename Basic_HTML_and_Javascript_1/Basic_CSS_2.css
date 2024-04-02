@@ -1,0 +1,12 @@
+.basic_style {
+	color: purple;
+	background-color: black;
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+h1 {
+	color: red;
+	text-shadow: 2px 2px black;
+}
