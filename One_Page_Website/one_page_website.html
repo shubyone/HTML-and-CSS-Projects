@@ -3,32 +3,9 @@
 	<head>
 		<title>Welcome to the Luton Town FC Fan Site</title>
 		<meta charset="utf-8">
-		<style>
-			body {
-			background-color: #fa4616;
-			}
-			
-			h1 {
-			color: white;
-			text-align: center;
-			}
-			
-			h2 {
-			color: white;
-			}
-			
-			h3 {
-			color: white;
-			}
-			p {
-			color: white;
-			}
-			
-			footer {
-				text-align: center;
-			}
-		
-		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="CSS/one_page_website.css">
+		<script src="JS/one_page_website.js"></script>
 	</head>
 	<body>
 		<!--NAV -->
@@ -48,50 +25,128 @@
 		<!-- HOME SECTION -->
 		<div id="home">
 			<h1>Luton Town FC Fansite</h1>
-			<p>This site is dedicated the the footabll team Luton based in the town of Luton in the United Kingdom.<p>
-			<img src="https://www.lutontown.co.uk/siteassets/image/news-images-2020-21/team-photo-2020-21/20-21-team-photo.jpg" alt="image of Luton Town first team and staff">
-		
-		
+				<div>
+					<img src="Images/Luton_1st_team.jpg" alt="image of Luton Town first team and staff">
+				</div>
+				<p>This site is dedicated the the footabll team Luton based in the town of Luton in the United Kingdom.<p>
 		</div>
 		<!-- END OF HOME SECTION -->
 		
-		<!-- GALLERY -->
+		<!-- GAL<LERY -->
+		 <!--
 		<div id="gallery">
 			<h2>Gallery</h2>
 			<div>
 				<h3>Goal Keeper - Thomas Kaminski <h3>
-					<div>
-						<img src="https://www.lutontown.co.uk/api/image/cropandgreyscale/75fcc53c-fec3-41c4-a108-6ef6952306a8/?preset=square&greyscale=false" alt="image of Luton GoalKeeper Thomas Kaminski">
+					<div class="photo">
+						<img src="Images/Thomas_Kaminski_580x500.jpg" alt="image of Luton GoalKeeper Thomas Kaminski">
 					</div>
 			</div>
 			
 			<div>
 				<h3>Defender - Tom Lockyer <h3>
-					<div>
-						<img src="https://www.lutontown.co.uk/api/image/cropandgreyscale/94de9a2f-7e06-4096-b033-de9bbe05fb2b/?preset=square&greyscale=false" alt="image of Luton Defender Tom Lockyear">
+					<div class="photo">
+						<img src="Images/Tom_Lockyear_580x500.jpg" alt="image of Luton Defender Tom Lockyear">
 					</div>
 			</div>
 			
 			<div>
 				<h3>Midfielder - Ross Barkley<h3>
-					<div>
-						<img src="https://www.lutontown.co.uk/api/image/cropandgreyscale/12bb5be1-7375-47a1-80b6-e650918f8d72/?preset=square&greyscale=false" alt="image of Luton Midfielder Ross Barkley">
+					<div class="photo">
+						<img src="Images/Ross_Barkley_580x500.jpg" alt="image of Luton Midfielder Ross Barkley">
 					</div>
 			</div>
 			
 			<div>
 				<h3>Forward - Carlton Morris <h3>
-					<div>
-						<img src="https://www.lutontown.co.uk/api/image/cropandgreyscale/eac1bc16-0af9-4856-9d98-471fd4174c28/?preset=square&greyscale=false" alt="image of Luton Forward  Carlton Morris">
+					<div class="photo">
+						<img src="Images/Carlton_Morris-580x500.jpg" alt="image of Luton Forward  Carlton Morris">
 					</div>
 			</div>
 
 		</div>
-		
+		-->
+
+
+
+		<!-- Start of Lightbox Gallery-->
+
+		<h2 id="team">Meet the Team</h2>
+
+		<!-- Images used to open the lightbox -->
+
+<div class="row">
+	<div class="column">
+	  <img src="Images/Thomas_Kaminski_Thumbnail.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="Images/Tom_Lockyear_Thumbnail.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="Images/Ross_Barkley_Thumbnail.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="Images/Carlton_Morris-Thumnail.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+	</div>
+  </div>
+
+  <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+  
+	  <div class="mySlides">
+		<div class="numbertext">1 / 4</div>
+		<img src="Images/Thomas_Kaminski_580x500.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">2 / 4</div>
+		<img src="Images/Tom_Lockyear_580x500.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">3 / 4</div>
+		<img src="Images/Ross_Barkley_580x500.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">4 / 4</div>
+		<img src="Images/Carlton_Morris-580x500.jpg" style="width:100%">
+	  </div>
+
+	   <!-- Next/previous controls -->
+	   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+   
+	   <!-- Caption text -->
+	   <div class="caption-container">
+		 <p id="caption"></p>
+	   </div>
+
+	    <!-- Thumbnail image controls -->
+		<div class="column">
+			<img class="demo" src="Images/Thomas_Kaminski_Thumbnail.jpg" onclick="currentSlide(1)" alt="Thomas Kaminski">
+		  </div>
+	  
+		  <div class="column">
+			<img class="demo" src="Images/Tom_Lockyear_Thumbnail.jpg" onclick="currentSlide(2)" alt="Tom Lockyear">
+		  </div>
+	  
+		  <div class="column">
+			<img class="demo" src="Images/Ross_Barkley_Thumbnail.jpg" onclick="currentSlide(3)" alt="Ross Barkley">
+		  </div>
+	  
+		  <div class="column">
+			<img class="demo" src="Images/Carlton_Morris-Thumnail.jpg" onclick="currentSlide(4)" alt="Carlton Morris">
+		  </div>
+		</div>
+	  </div>
+	  
 		<!-- END OF GALLERY -->
 		
 		<!-- VIDEO SECTION -->
-		<div id="video">
+		<div id="video"> 
 		<h2>Videos</h2>
 			<div>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/KpLzR20qocQ?si=jhlPu_Smk631IcWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
