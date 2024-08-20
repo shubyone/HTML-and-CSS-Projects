@@ -21,6 +21,12 @@ Contains a Navbar, image containers and form.
 An exmaple website for a movie theatre styled  using Bootstrap 4.
 I used lots different Bootstap componenets - Navbar, Jumbotron amd cards.
 
+#JavaScript Projects
+
+Pizza Mneu
+Tic Tac Toe game
+Calculator
+
 
 
 
